@@ -39,38 +39,84 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid var(--accent-main);
     padding: 0 5%;
+    width: 100%;
 }
+
 .header-inner {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    min-height: 90px; /* Changed height to min-height to allow growth */
+    flex-wrap: wrap;  /* This is the key fix for small tabs */
+    padding: 10px 0;
 }
+
 .system-id { font-size: 0.6rem; color: var(--accent-alt); letter-spacing: 3px; font-weight: 900; }
-.page-title { font-size: 1.5rem; text-transform: uppercase; font-weight: 300; }
+.page-title { font-size: 1.5rem; text-transform: uppercase; font-weight: 300; line-height: 1.2; }
 .page-title .surname { font-weight: 900; }
 
-.main-nav { display: flex; gap: 5px; height: 100%; }
+.main-nav { 
+    display: flex; 
+    gap: 5px; 
+    height: 100%; 
+    flex-wrap: nowrap; /* Keep links on one line */
+}
+
 .nav-item {
     text-decoration: none;
     color: #ccc;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 20px;
+    padding: 10px 15px; /* Slightly reduced horizontal padding */
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     transition: 0.3s;
+    white-space: nowrap; /* Prevents text from breaking into two lines */
 }
+
 .nav-item.active { box-shadow: inset 0 -4px 0 var(--accent-alt); color: #fff; }
 .nav-num { font-size: 0.6rem; color: var(--accent-main); }
 
 .header-status { display: flex; gap: 20px; }
 .status-box .label { font-size: 0.5rem; color: var(--accent-main); font-weight: 900; display: block; }
 .status-box .value { font-size: 0.8rem; font-weight: 700; }
+
+/* =========================================
+   RESPONSIVE BREAKPOINT (Mobile & Small Tabs)
+   ========================================= */
+@media (max-width: 900px) {
+    .header-inner {
+        flex-direction: column; /* Stacks Title and Nav vertically */
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .header-branding {
+        text-align: center;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto; /* Adds a swipe-scroll if buttons are too wide */
+        padding-bottom: 5px;
+    }
+
+    .nav-item {
+        padding: 10px 10px;
+        font-size: 0.7rem; /* Slightly smaller text for mobile */
+    }
+
+    /* Optional: Hide status box on very small screens to save space */
+    .header-status {
+        display: none; 
+    }
+}
 
 /* =========================================
    HOMEPAGE MODULE (Updated Fixes)
@@ -1032,3 +1078,4 @@ a:visited {
     color: var(--rb-yellow);
     font-weight: 900;
 }
+
