@@ -1079,3 +1079,47 @@ a:visited {
     font-weight: 900;
 }
 
+/* =========================================
+   CUP HISTORY MODULE
+   ========================================= */
+.dual-column-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.status-pill {
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.65rem;
+    font-weight: 900;
+}
+
+.status-pill.win { background: #2ecc71; color: #fff; }
+.status-pill.loss { background: var(--accent-main); color: #fff; }
+
+.sidebar-stat {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-top: 1px solid var(--border-color);
+}
+
+.sidebar-stat .player-name {
+    display: block;
+    font-weight: 900;
+    color: var(--rb-white);
+    font-size: 1rem;
+}
+
+.sidebar-stat .stat-value {
+    color: var(--accent-alt);
+    font-size: 0.8rem;
+}
+
+/* Mobile fix for dual column */
+@media (max-width: 900px) {
+    .dual-column-layout {
+        grid-template-columns: 1fr;
+    }
+}
