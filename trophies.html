@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honours & Milestones | Emma Risako</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="honours-page">
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-branding">
+                <span class="system-id">ER-26 // HC</span>
+                <h1 class="page-title">Emma <span class="surname">Risako</span></h1>
+            </div>
+
+          <nav class="main-nav">
+    <a href="index.html" class="nav-item">Overview</a>
+    <a href="career-by-year.html" class="nav-item">History</a>
+    <a href="trophies.html" class="nav-item">Honours</a>
+    <a href="philosophy.html" class="nav-item">Philosophy</a> 
+</nav>
+
+            <div class="header-status">
+                <div class="status-box">
+                    <span class="label">TROPHY COUNT</span>
+                    <span class="value">0 Total</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="history-container">
+        
+        <section class="career-hud">
+            <div class="hud-grid">
+                <div class="hud-item highlight">
+                    <i class="fas fa-trophy"></i>
+                    <div class="hud-data">
+                        <span class="hud-value">0</span>
+                        <span class="hud-label">Major Titles</span>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <i class="fas fa-medal"></i>
+                    <div class="hud-data">
+                        <span class="hud-value">0</span>
+                        <span class="hud-label">Cup Wins</span>
+                    </div>
+                </div>
+                <div class="hud-item success">
+                    <i class="fas fa-arrow-trend-up"></i>
+                    <div class="hud-data">
+                        <span class="hud-value">0</span>
+                        <span class="hud-label">Promotions</span>
+                    </div>
+                </div>
+                <div class="hud-item danger">
+                    <i class="fas fa-user-xmark"></i>
+                    <div class="hud-data">
+                        <span class="hud-value">0</span>
+                        <span class="hud-label">Sackings</span>
+                    </div>
+                </div>
+                <div class="hud-item info">
+                    <i class="fas fa-award"></i>
+                    <div class="hud-data">
+                        <span class="hud-value">0</span>
+                        <span class="hud-label">Individual Awards</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="section-toggle-nav">
+            <button onclick="showSection('trophies')" class="toggle-btn active" id="btn-trophies">Trophy Cabinet</button>
+            <button onclick="showSection('events')" class="toggle-btn" id="btn-events">Career Timeline</button>
+        </nav>
+
+        <section id="trophies" class="cabinet-view">
+            <div class="cabinet-grid">
+                <div class="cabinet-slot empty">
+                    <div class="slot-header">Domestic Leagues</div>
+                    <div class="slot-content">
+                        <div class="trophy-placeholder">No Honours Recorded</div>
+                    </div>
+                </div>
+
+                <div class="cabinet-slot empty">
+                    <div class="slot-header">Domestic Cups</div>
+                    <div class="slot-content">
+                        <div class="trophy-placeholder">No Honours Recorded</div>
+                    </div>
+                </div>
+
+                                <div class="cabinet-slot empty">
+                    <div class="slot-header">League Cups</div>
+                    <div class="slot-content">
+                        <div class="trophy-placeholder">No Honours Recorded</div>
+                    </div>
+                </div>
+
+                <div class="cabinet-slot empty">
+                    <div class="slot-header">Continental Cups</div>
+                    <div class="slot-content">
+                        <div class="trophy-placeholder">No Honours Recorded</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="timeline-view" style="display: none;">
+            <div class="table-card">
+                <div class="table-wrapper">
+                    <table class="manager-table">
+                        <thead>
+                            <tr>
+                                <th width="150">Year</th>
+                                <th width="200">Club</th>
+                                <th>Event Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="current-row">
+                                <td class="year-cell">2025</td>
+                                <td class="club-cell">
+                                    <img src="images/03_ardija.png" class="club-icon-small" alt="Club Logo">
+                                    <span>RB Omiya Ardija</span>
+                                </td>
+                                <td>Hired as Head Coach (WE League)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Emma Risako Manager Persona</p>
+            <div class="footer-tag">BRANDED ASSETS // RESTRICTED ACCESS</div>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all views
+            document.getElementById('trophies').style.display = 'none';
+            document.getElementById('events').style.display = 'none';
+            
+            // Show selected view
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Handle Button active states
+            document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
