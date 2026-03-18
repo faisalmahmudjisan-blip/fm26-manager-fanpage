@@ -1028,6 +1028,21 @@ body {
     margin-right: 10px;
 }
 
+/* Transfer Fee Styling */
+.fee-pill {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.fee-pill.free {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent-alt); /* Using your yellow/gold accent */
+    border: 1px solid var(--accent-alt);
+}
+
 /* =========================================
    GLOBAL LINK RESET
    ========================================= */
