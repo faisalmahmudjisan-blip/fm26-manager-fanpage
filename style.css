@@ -1123,3 +1123,109 @@ a:visited {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   DOMESTIC CUP MODULE
+   ========================================= */
+.tournament-hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('stadium-bg.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-left: 5px solid var(--accent-main);
+    margin-bottom: 30px;
+}
+
+.date-stamp {
+    color: var(--accent-alt);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.tournament-hero h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.notes-grid {
+    margin-top: 30px;
+}
+
+.note-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-alt);
+}
+
+.note-box h3 {
+    font-size: 0.8rem;
+    color: var(--accent-main);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.note-box p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* =========================================
+   CONTINENTAL MODULE
+   ========================================= */
+.status-banner {
+    background: rgba(0, 50, 100, 0.2);
+    border: 1px solid #1a73e8;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.status-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 25px;
+}
+
+.status-icon {
+    font-size: 2.5rem;
+    color: #1a73e8;
+}
+
+.status-text h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.status-text p {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.status-badge {
+    margin-left: auto;
+    background: #444;
+    color: #aaa;
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.empty-row td {
+    text-align: center;
+    padding: 50px !important;
+    color: #666;
+    font-style: italic;
+    font-size: 0.8rem;
+}
